@@ -7,6 +7,8 @@ package Gui;
 
 import Metodos.Operaciones;
 import com.sun.org.apache.xerces.internal.impl.io.ASCIIReader;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -19,7 +21,9 @@ public class Principal extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public Principal()
+    {
+        setIconImage(new ImageIcon(getClass().getResource("/Img/icono.png")).getImage());
         initComponents();
     }
 
@@ -45,6 +49,7 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Encriptación");
+        setResizable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Mensaje"));
 
@@ -161,6 +166,8 @@ public class Principal extends javax.swing.JFrame {
         tblDatos.setModel(new DefaultTableModel());
         op.limpiar();
         
+        
+        
         String mensaje = areaMensaje.getText();
         
         if(!mensaje.isEmpty())
@@ -168,7 +175,6 @@ public class Principal extends javax.swing.JFrame {
 //            op.encriptarContenido(mensaje);
             areaMensajeEncriptado.setText(op.encriptarContenido(mensaje));
             mostrar();
-            
         }
         else
         {

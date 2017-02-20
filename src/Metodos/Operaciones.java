@@ -13,19 +13,22 @@ import java.util.ArrayList;
  */
 public class Operaciones
 {
-    
+    /**
+     * Estos Array se van a utilizar para cargarlos en la tabla del la GUI
+     */
     public static ArrayList ascii = new ArrayList<>();
     public static ArrayList binarios = new ArrayList<>();
     public static ArrayList aplicandoAndConG = new ArrayList<>();
     public static ArrayList tablaConRecorrido = new ArrayList<>();
     public static ArrayList asciiFinal = new ArrayList<>();
     
-    //en este se almacenaran todos las converciones en binario
-    
-    
-    
     String gBinario = "1100111";
     
+    /**
+     * Método para encriptar el mensaje
+     * @param contenido Texto a encriptar en String
+     * @return String Valor encriptado
+     */
     public String encriptarContenido(String contenido)
     {
         char caracter = '0';
@@ -54,6 +57,11 @@ public class Operaciones
         return binarioACaracter();
     }
     
+    
+    /**
+     * Método para convertir los binarios a CARACTER
+     * @return String valor del binario en CARACTER
+     */
     public String binarioACaracter()
     {
         int resultado = 0;
@@ -70,6 +78,11 @@ public class Operaciones
         return mensajeEncriptado;
     }
     
+    /**
+     * Convierte los caracteres en ASCII
+     * @param letra
+     * @return int Valor en ASCII de los caracteres
+     */
     public int caracterAAscii(char letra)
     {
         int resultado = 0;
@@ -77,6 +90,11 @@ public class Operaciones
         return resultado;
     }
     
+    /**
+     * Convierte el ASCII en Binario
+     * @param valorAscii
+     * @return String Valor del ASCII en binario
+     */
     public String asciiABinario(int valorAscii)
     {
         String binario = null;
@@ -84,6 +102,11 @@ public class Operaciones
         return binario;
     }
     
+    /**
+     * Aplicación de la operación AND con el Binario de la letra g (1100111)
+     * @param binario 
+     * @return String Valor en binario al aplicarle la operación
+     */
     public String aplicarAndConLetraG(String binario)
     {
         String resultado = "";
