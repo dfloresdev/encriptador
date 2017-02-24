@@ -22,6 +22,8 @@ public class Operaciones
     public static ArrayList tablaConRecorrido = new ArrayList<>();
     public static ArrayList asciiFinal = new ArrayList<>();
     
+    
+    
     String gBinario = "1100111";
     
     /**
